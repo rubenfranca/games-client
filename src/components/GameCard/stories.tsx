@@ -4,6 +4,11 @@ import GameCard, { GameCardProps } from '.'
 export default {
   title: 'GameCard',
   component: GameCard,
+  parameters: {
+    backgrounds: {
+      default: 'won-dark'
+    }
+  },
   args: {
     title: 'Population Zero',
     developer: 'Rockstar Games',
@@ -14,11 +19,6 @@ export default {
   argTypes: {
     onFav: { action: 'click' },
     ribbon: { type: 'string' }
-  },
-  parameters: {
-    backgrounds: {
-      default: 'dark'
-    }
   }
 } as Meta
 
