@@ -50,7 +50,8 @@ export const MenuFull = styled.nav<MenuFullProps>`
     flex-direction: column;
     justify-content: space-between;
     opacity: ${isOpen ? 1 : 0};
-    position: absolute;
+    position: fixed;
+    z-index: ${theme.layers.menu};
     background: ${theme.colors.white};
     top: 0;
     bottom: 0;

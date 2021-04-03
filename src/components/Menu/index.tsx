@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useState } from 'react'
 import * as S from './styles'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
@@ -42,7 +43,11 @@ const Menu = ({ username }: MenuProps) => {
           <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconWrapper>
         <MediaMatch greaterThan="medium">
-          {!username && <Button>Sign in</Button>}
+          {!username && (
+            <Link href="/sign-in" passHref>
+              <Button as="a">Sign in</Button>
+            </Link>
+          )}
         </MediaMatch>
       </S.MenuGroup>
 
