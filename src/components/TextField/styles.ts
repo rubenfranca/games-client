@@ -85,7 +85,7 @@ const wrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.div<Pick<TextFieldProps, 'disabled'>>`
+export const Wrapper = styled.div<WrapperProps>`
   ${({ theme, disabled }) => css`
     ${disabled && wrapperModifiers.disabled(theme)}
   `}
