@@ -13,6 +13,7 @@ describe('<Grid />', () => {
         grid-gap: 3.2rem;
         margin: 3.2rem 0;
       }
+
       <div
         class="c0"
       >
