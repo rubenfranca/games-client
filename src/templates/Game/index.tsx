@@ -12,6 +12,8 @@ import Showcase from 'components/Showcase'
 import * as S from './styles'
 
 export type GameTemplateProps = {
+  upcomingTitle: string
+  recommendedTitle: string
   cover: string
   gameInfo: GameInfoProps
   gallery?: GalleryImageProps[]
@@ -23,6 +25,8 @@ export type GameTemplateProps = {
 }
 
 const Game = ({
+  upcomingTitle,
+  recommendedTitle,
   cover,
   gameInfo,
   gallery,
@@ -54,12 +58,12 @@ const Game = ({
       </S.SectionGameDetails>
 
       <Showcase
-        title="Upcomming"
+        title={upcomingTitle}
         games={upcomingGames}
         highlight={upcomingHighlight}
       />
 
-      <Showcase title="You may like these games" games={recommendedGames} />
+      <Showcase title={recommendedTitle} games={recommendedGames} />
     </S.Main>
   </Base>
 )
