@@ -70,11 +70,11 @@ exports[`<Banner /> should render the heading 1`] = `
 }
 
 @media (max-width:1170px) {
-  .c0 .sc-bdfBwQ {
+  .c0 .sc-bdnxRM {
     right: 0;
   }
 
-  .c0 .sc-bdfBwQ::before {
+  .c0 .sc-bdnxRM::before {
     display: none;
   }
 }

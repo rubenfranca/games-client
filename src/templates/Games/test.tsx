@@ -34,9 +34,12 @@ jest.mock('templates/Base', () => ({
   }
 }))
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-jest.mock('next/link', () => ({ children }) => children)
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: function Mock({ children }: { children: React.ReactNode }) {
+    return <div>{children}</div>
+  }
+}))
 
 beforeEach(cleanup)
 
