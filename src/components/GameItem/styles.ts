@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 
 export const GameContent = styled.div`
   display: flex;
+  width: 100%;
 `
 
 export const ImageBox = styled.div`
@@ -33,7 +34,7 @@ export const ImageBox = styled.div`
       margin-right: ${theme.spacings.xsmall};
       width: 15rem;
       height: 7rem;
-    `}
+    `};
   `}
 `
 
@@ -41,6 +42,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 `
 
 export const Title = styled.h3`
@@ -54,11 +56,26 @@ export const Title = styled.h3`
     ${media.greaterThan('medium')`
       font-size: 2rem;
       line-height: 2rem;
-    `}
+    `};
   `}
 `
 
-export const Price = styled.p`
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+`
+
+export const Remove = styled.div`
+  ${({ theme }) => css`
+    cursor: pointer;
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.small};
+  `}
+`
+
+export const Price = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     padding: 0.2rem ${theme.spacings.xxsmall};
@@ -73,6 +90,13 @@ export const DownloadLink = styled.a`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
     margin-left: ${theme.spacings.xxsmall};
+    position: relative;
+
+    & > svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   `}
 `
 
@@ -84,6 +108,7 @@ export const PaymentContent = styled.div`
     flex-direction: column;
     min-width: 28rem;
     margin-top: ${theme.spacings.xsmall};
+
     ${media.greaterThan('medium')`
       margin-top: 0;
       flex: 1;
@@ -98,9 +123,11 @@ export const CardInfo = styled.div`
   ${({ theme }) => css`
     display: flex;
     align-items: center;
+
     img {
       margin-left: ${theme.spacings.xxsmall};
     }
+
     ${media.lessThan('medium')`
       margin-top: ${theme.spacings.xsmall};
     `}
